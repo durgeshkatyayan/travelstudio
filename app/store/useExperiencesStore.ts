@@ -27,19 +27,19 @@ export const useExperiencesStore = create<Store>((set) => ({
     currentIndex: 0,
 
     fetchExperiences: async () => {
-        try {
-            const res = await fetch("/data/data.json");
-            const data = await res.json();
+    try {
+        const res = await fetch("/api/experiences");
+        const data = await res.json();
+console.log(data)
+        set({
+            internalExperiences: data.internalExperiences,
+            externalExperiences: data.externalExperiences,
+        });
+    } catch (error) {
+        console.error("Error fetching experiences:", error);
+    }
+},
 
-
-            set({
-                internalExperiences: data.internalExperiences,
-                externalExperiences: data.externalExperiences,
-            });
-        } catch (error) {
-            console.error("Error fetching experiences:", error);
-        }
-    },
 
     setSelectedRoom: (room: string) => {
         if (typeof window !== "undefined") {

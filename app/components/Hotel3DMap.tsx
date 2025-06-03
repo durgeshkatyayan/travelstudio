@@ -25,18 +25,18 @@ export default function Hotel3DMap() {
     renderer.setPixelRatio(window.devicePixelRatio);
     mount.appendChild(renderer.domElement);
 
-    // Orbit Controls
+
     const controls = new OrbitControls(camera, renderer.domElement);
     camera.position.set(0, 10, 20);
     controls.update();
 
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0x404040); // soft white light
+  
+    const ambientLight = new THREE.AmbientLight(0x404040); 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
     directionalLight.position.set(10, 20, 10);
     scene.add(ambientLight, directionalLight);
 
-    // Room cubes
+   
     const rooms = [
       { name: 'Spa', x: -5 },
       { name: 'Gym', x: 0 },
@@ -52,7 +52,7 @@ export default function Hotel3DMap() {
       scene.add(cube);
     });
 
-    // Raycasting
+
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
 
@@ -72,7 +72,7 @@ export default function Hotel3DMap() {
 
     mount.addEventListener('click', onMouseClick);
 
-    // Animation loop
+ 
     let animationId: number;
     const animate = () => {
       animationId = requestAnimationFrame(animate);
@@ -81,7 +81,6 @@ export default function Hotel3DMap() {
     };
     animate();
 
-    // Resize handler
     const handleResize = () => {
       if (!mount) return;
       camera.aspect = mount.clientWidth / mount.clientHeight;
@@ -90,7 +89,7 @@ export default function Hotel3DMap() {
     };
     window.addEventListener('resize', handleResize);
 
-    // Cleanup
+
     return () => {
       cancelAnimationFrame(animationId);
       mount.removeChild(renderer.domElement);

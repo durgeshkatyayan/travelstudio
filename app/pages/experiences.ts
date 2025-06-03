@@ -4,8 +4,8 @@ import { promises as fs } from 'fs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'data.json');
-
+    const filePath = path.join(process.cwd(), 'app', 'data', 'data.json');
+    console.log('Resolved path:', filePath);
     const jsonData = await fs.readFile(filePath, 'utf-8');
     const data = JSON.parse(jsonData);
 
