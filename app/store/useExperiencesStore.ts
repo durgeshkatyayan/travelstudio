@@ -30,7 +30,7 @@ export const useExperiencesStore = create<Store>((set) => ({
     try {
         const res = await fetch("/api/experiences");
         const data = await res.json();
-console.log(data)
+// console.log(data)
         set({
             internalExperiences: data.internalExperiences,
             externalExperiences: data.externalExperiences,
