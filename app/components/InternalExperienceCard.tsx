@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import { InternalExperience } from '../types/experience';
 
-export default function InternalExperienceCard({ experience }: { experience: any }) {
-return (
+export default function InternalExperienceCard({ experience }: { experience: InternalExperience }) {
+  return (
     <div className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
       <div className="relative overflow-hidden">
         <Image

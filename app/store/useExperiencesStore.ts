@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { ExternalExperience, InternalExperience } from "../types/experience";
 
 interface Experience {
     id: number;
@@ -10,9 +11,15 @@ interface Experience {
     rating?: number;
 }
 
+// interface ExperiencesStore {
+//   internalExperiences: InternalExperience[];
+//   externalExperiences: ExternalExperience[];
+//   fetchExperiences: () => void;
+// }
+
 interface Store {
-    internalExperiences: Experience[];
-    externalExperiences: Experience[];
+    internalExperiences:InternalExperience[];
+    externalExperiences:ExternalExperience[];
     selectedRoom: string | null;
     currentIndex: number;
     fetchExperiences: () => Promise<void>;
