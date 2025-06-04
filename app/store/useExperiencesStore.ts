@@ -1,15 +1,6 @@
 import { create } from "zustand";
 import { ExternalExperience, InternalExperience } from "../types/experience";
 
-interface Experience {
-    id: number;
-    title?: string;
-    description?: string;
-    image?: string;
-    name?: string;
-    distance?: string;
-    rating?: number;
-}
 
 // interface ExperiencesStore {
 //   internalExperiences: InternalExperience[];
