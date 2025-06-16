@@ -25,10 +25,10 @@
   font-family: Arial, Helvetica, sans-serif;
 } */
  
-@theme inline {
+/* @theme inline {
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 }
- 
+  */
 @keyframes spotlight {
   0% {
     opacity: 0;

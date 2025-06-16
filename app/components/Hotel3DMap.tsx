@@ -92,7 +92,7 @@ export default function Hotel3DMap() {
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-900 to-purple-900">
           <div className="text-center">
             <div className="relative">
-              <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-blue-500 border-r-2 border-purple-500 mb-4"></div>
+              <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-r-2 border-purple-500 mb-4"></div>
               <div className="absolute inset-0 animate-ping rounded-full h-16 w-16 border border-white/20"></div>
             </div>
             <p className="text-white text-lg font-semibold animate-pulse">Loading 3D Hotel View...</p>
