@@ -1,5 +1,6 @@
 import { MapPin, Star } from 'lucide-react';
 import { ExternalExperience } from '../types/experience';
+import Image from 'next/image';
 
 export default function ExternalExperienceList({ experiences }: { experiences: ExternalExperience[] }) {
   return (
@@ -12,7 +13,7 @@ export default function ExternalExperienceList({ experiences }: { experiences: E
             style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
           >
             <div className="relative h-48 overflow-hidden">
-              <img
+              <Image
                 src={'https'}
                 alt={exp.name}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"

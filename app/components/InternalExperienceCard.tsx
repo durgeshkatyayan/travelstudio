@@ -1,6 +1,7 @@
 import { Clock } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { InternalExperience } from '../types/experience';
+import Image from 'next/image';
 // import { GlowingEffect } from './ui/glowing-effect';
 
 const AnimatedSVGBackground = () => {
@@ -151,12 +152,6 @@ export default function InternalExperienceCard({ experience }: { experience: Int
     if (cardRef.current) {
       observer.observe(cardRef.current);
     }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
   }, [hasAnimated]);
 
   return (
@@ -179,7 +174,7 @@ export default function InternalExperienceCard({ experience }: { experience: Int
      
       <div className="relative z-10">
         <div className="relative h-64 overflow-hidden">
-          <img
+          <Image
             src={experience.image || "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&h=300&fit=crop"}
             alt={experience.title}
             className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? 'scale-110' : 'scale-100'
