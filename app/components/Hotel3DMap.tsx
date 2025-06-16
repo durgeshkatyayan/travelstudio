@@ -1,4 +1,4 @@
-import { Camera, Sparkles, Eye, RotateCcw,  MapPin, Star, Wifi, Car, Coffee, Dumbbell } from "lucide-react";
+import { Camera, Sparkles, Eye, RotateCcw} from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { Spotlight } from "./ui/Spotlight";
 
