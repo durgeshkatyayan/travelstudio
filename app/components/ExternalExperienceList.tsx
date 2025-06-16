@@ -13,7 +13,7 @@ export default function ExternalExperienceList({ experiences }: { experiences: E
           >
             <div className="relative h-48 overflow-hidden">
               <img
-     
+                src={'https'}
                 alt={exp.name}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />

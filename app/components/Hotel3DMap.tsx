@@ -1,4 +1,4 @@
-import { Camera, Sparkles, Eye, RotateCcw, ZoomIn, MapPin, Star, Wifi, Car, Coffee, Dumbbell } from "lucide-react";
+import { Camera, Sparkles, Eye, RotateCcw,  MapPin, Star, Wifi, Car, Coffee, Dumbbell } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { Spotlight } from "./ui/Spotlight";
 
@@ -27,7 +27,6 @@ const FloatingParticles = () => {
 
 export default function Hotel3DMap() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [currentView, setCurrentView] = useState('main');
   const [rotationX, setRotationX] = useState(-20);
   const [rotationY, setRotationY] = useState(15);
   const [isRotating, setIsRotating] = useState(false);
@@ -50,17 +49,10 @@ export default function Hotel3DMap() {
   const resetView = () => {
     setRotationX(-20);
     setRotationY(15);
-    setCurrentView('main');
+    
   };
 
-  const amenities = [
-    { icon: Coffee, label: "Restaurant", position: { top: '20%', left: '25%' }, color: 'bg-amber-500', delay: 1000 },
-    { icon: Dumbbell, label: "Fitness Center", position: { top: '35%', right: '20%' }, color: 'bg-red-500', delay: 1200 },
-    { icon: Car, label: "Parking", position: { bottom: '25%', left: '15%' }, color: 'bg-gray-600', delay: 1400 },
-    { icon: Wifi, label: "WiFi Zone", position: { top: '60%', right: '35%' }, color: 'bg-blue-500', delay: 1600 },
-    { icon: Star, label: "Spa", position: { top: '45%', left: '60%' }, color: 'bg-pink-500', delay: 1800 },
-    { icon: MapPin, label: "Pool", position: { bottom: '40%', right: '25%' }, color: 'bg-cyan-500', delay: 2000 }
-  ];
+
 
   return (
     <div className="relative w-full h-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl overflow-hidden">

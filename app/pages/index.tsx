@@ -8,23 +8,23 @@ import ExternalExperienceList from '../components/ExternalExperienceList';
 
 
 export default function ExplorePage() {
-  const [currentSection, setCurrentSection] = useState(0);
+  // const [currentSection, setCurrentSection] = useState(0);
   const { fetchExperiences, internalExperiences, externalExperiences } = useExperiencesStore();
   useEffect(() => {
     fetchExperiences();
   }, [fetchExperiences]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const section = Math.floor(scrollY / (windowHeight * 0.8));
-      setCurrentSection(section);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     const windowHeight = window.innerHeight;
+  //     const section = Math.floor(scrollY / (windowHeight * 0.8));
+  //     setCurrentSection(section);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
       {/* <h1 className="text-3xl font-bold text-center mb-6">Explore Our Hotel</h1> */}
